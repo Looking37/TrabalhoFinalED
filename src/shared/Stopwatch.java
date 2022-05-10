@@ -4,11 +4,10 @@ public class Stopwatch {
   private Stopwatch() {
   }
 
-
   public static long calcElapsedTime(Runnable runnable) {
-    long start = System.nanoTime();
+    long start = System.currentTimeMillis();
     runnable.run();
-    long end = System.nanoTime();
+    long end = System.currentTimeMillis();
     return end - start;
   }
 
