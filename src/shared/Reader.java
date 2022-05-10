@@ -8,14 +8,14 @@ public class Reader {
   private Reader() {
   }
 
-  public static void readFile(Map<String, Integer> collection, String path) {
+  public static void readFileToMap(Map<String, Integer> map, String path) {
     try {
       File file = new File(path);
       Scanner scanner = new Scanner(file);
 
       while (scanner.hasNext()) {
         String word = scanner.next();
-        collection.put(word, 0);
+        map.put(word, 0);
       }
       scanner.close();
 
@@ -24,14 +24,33 @@ public class Reader {
     }
   }
 
-  public static void readFile(Collection<String> collection, String path) {
+  public static void readFileToSet(Collection<String> set, String path) {
     try {
       File file = new File(path);
       Scanner scanner = new Scanner(file);
 
       while (scanner.hasNext()) {
         String word = scanner.next();
-        collection.add(word);
+        set.add(word);
+      }
+      scanner.close();
+
+    } catch (FileNotFoundException e) {
+      System.out.println("Não foi possível abrir o arquivo");
+    }
+  }
+
+  public static void readFileToList(List<String> list, String path) {
+    try {
+      File file = new File(path);
+      Scanner scanner = new Scanner(file);
+
+      while (scanner.hasNext()) {
+        String word = scanner.next();
+
+        if (!list.contains(word)) {
+          list.add(word);
+        }
       }
       scanner.close();
 

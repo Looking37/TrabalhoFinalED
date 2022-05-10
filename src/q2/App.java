@@ -15,17 +15,17 @@ public class App {
 
     System.out.println("====  Questão 2  ====");
     elapsedTime = Stopwatch
-        .calcElapsedTime(() -> Reader.readFile(hashSet, file));
+        .calcElapsedTime(() -> Reader.readFileToSet(hashSet, file));
 
     System.out.println("HashSet: " + elapsedTime + " ns");
 
     elapsedTime = Stopwatch
-        .calcElapsedTime(() -> Reader.readFile(linkedHashSet, file));
+        .calcElapsedTime(() -> Reader.readFileToSet(linkedHashSet, file));
 
     System.out.println("LinkedHashSet: " + elapsedTime + " ns");
 
     elapsedTime = Stopwatch
-        .calcElapsedTime(() -> Reader.readFile(treeSet, file));
+        .calcElapsedTime(() -> Reader.readFileToSet(treeSet, file));
 
     System.out.println("TreeSet: " + elapsedTime + " ns");
 
