@@ -11,9 +11,8 @@ public class App {
     LinkedHashSet<String> linkedHashSet = new LinkedHashSet<String>();
     TreeSet<String> treeSet = new TreeSet<String>();
 
+	System.out.println("==== Questão 2 ====");
     long elapsedTime;
-
-    System.out.println("====  QuestÃ£o 2  ====");
     elapsedTime = Stopwatch
         .calcElapsedTimeInMs(() -> Reader.readFileToSet(hashSet, file));
 

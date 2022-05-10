@@ -9,9 +9,8 @@ public class App {
 		LinkedHashMap<String, Integer> linkedhashmap = new LinkedHashMap<>();
 		TreeMap<String, Integer> treemap = new TreeMap<>();
 
+		System.out.println("==== Questão 3 ====");
 		long elapsedTime;
-
-		System.out.println("==== Questï¿½o 3 ====");
 		elapsedTime = Stopwatch.calcElapsedTimeInMs(() -> Reader.readFileToMap(hashmap, "./src/resources/leipzig100k.txt"));
 		System.out.println("HashMap: " + elapsedTime + " ms");
 

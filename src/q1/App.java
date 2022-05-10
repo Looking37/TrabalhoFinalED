@@ -13,22 +13,22 @@ public class App {
 		LinkedList<String> linkedList = new LinkedList<String>();
 		ArrayList<String> arrayList = new ArrayList<String>();
 
+		System.out.println("==== Questão 1 ====");
 		long elapsedTime;
-
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(vector,
 						"./src/resources/leipzig100k.txt"));
-		System.out.println("vector: " + elapsedTime + " ms");
+		System.out.println("Vector: " + elapsedTime + " ms");
 
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(linkedList,
 						"./src/resources/leipzig100k.txt"));
-		System.out.println("linkedList: " + elapsedTime + " ms");
+		System.out.println("LinkedList: " + elapsedTime + " ms");
 
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(arrayList,
 						"./src/resources/leipzig100k.txt"));
-		System.out.println("arrayList: " + elapsedTime + " ms");
+		System.out.println("ArrayList: " + elapsedTime + " ms");
 
 	}
 }
