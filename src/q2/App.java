@@ -8,11 +8,13 @@ import java.util.*;
 
 public class App {
   public static void main(String[] args) {
-    HashSet<String> words = new HashSet<String>();
-    Reader.readFile(words, "./src/resources/leipzig100k.txt");
+    HashMap<String, Integer> hashMapWords = new HashMap<String, Integer>();
 
-    long elapsedTime = Stopwatch.calcElapsedTime(() -> words.contains("Travis"));
-    System.out.println("Tempo Gasto: " + elapsedTime + " ns");
+    long elapsedTime = Stopwatch
+        .calcElapsedTime(() -> Reader.readFile(hashMapWords,
+            "./src/resources/leipzig100k.txt"));
+
+    System.out.println("TEMPO GASTO: " + elapsedTime + " ns");
 
   }
 }
