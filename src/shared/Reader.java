@@ -24,7 +24,7 @@ public class Reader {
     }
   }
 
-  public static void readFileToSet(Collection<String> set, String path) {
+  public static void readFileToSet(Set<String> set, String path) {
     try {
       File file = new File(path);
       Scanner scanner = new Scanner(file);
