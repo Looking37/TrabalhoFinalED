@@ -12,14 +12,14 @@ public class App {
 		long elapsedTime;
 
 		System.out.println("==== Quest�o 3 ====");
-		elapsedTime = Stopwatch.calcElapsedTime(() -> Reader.readFileToMap(hashmap, "./src/resources/leipzig100k.txt"));
+		elapsedTime = Stopwatch.calcElapsedTimeInMs(() -> Reader.readFileToMap(hashmap, "./src/resources/leipzig100k.txt"));
 		System.out.println("HashMap: " + elapsedTime + " ms");
 
 		elapsedTime = Stopwatch
-				.calcElapsedTime(() -> Reader.readFileToMap(linkedhashmap, "./src/resources/leipzig100k.txt"));
+				.calcElapsedTimeInMs(() -> Reader.readFileToMap(linkedhashmap, "./src/resources/leipzig100k.txt"));
 		System.out.println("LinkedHashMap: " + elapsedTime + " ms");
 
-		elapsedTime = Stopwatch.calcElapsedTime(() -> Reader.readFileToMap(treemap, "./src/resources/leipzig100k.txt"));
+		elapsedTime = Stopwatch.calcElapsedTimeInMs(() -> Reader.readFileToMap(treemap, "./src/resources/leipzig100k.txt"));
 		System.out.println("TreeMap: " + elapsedTime + " ms");
 	}
 }
