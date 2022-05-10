@@ -19,48 +19,53 @@ vaccinations
 government
 Authorities
  */
-public class Consulter {
+public class Delete {
 
-	  private Consulter() {
+	  private Delete() {
 	  }
 
-	  public static void readFileToMap(Map<String, Integer> map) {
+	  public static void deleteFileToMap(Map<String, Integer> map) {
 		  	String[] st = {"Lisbon", "NASA", "Kyunghee", "Konkuk",
 		  			"Sogang", "momentarily", "rubella", "vaccinations",
 		  			"government", "Authorities"};
+		  	System.out.println("Deleting...");
 		  	for (int i=0; i<10; i++) {
-		  		if(map.containsKey(st[i])) {
-		  			System.out.println("word found: " + st[i]);
+		  		if(map.remove(st[i])!=null) {
+		  			System.out.print(st[i] + ", ");
 		  		}
 		  		else
-		  			System.out.println("word not found");
+		  			System.out.println("\nnot found: " + st[i]);
 		  	}
+		  	System.out.print("\n");
 	  }
 	  
-	  public static void readFileToSet(Set<String> set) {
+	  public static void deleteFileToSet(Set<String> set) {
 		  	String[] st = {"Lisbon", "NASA", "Kyunghee", "Konkuk",
 		  			"Sogang", "momentarily", "rubella", "vaccinations",
 		  			"government", "Authorities"};
+		  	System.out.println("Deleting...");
 		  	for (int i=0; i<10; i++) {
-		  		if(set.contains(st[i])) {
-		  			System.out.println("word found: " + st[i]);
+		  		if(set.remove(st[i])==true) {
+		  			System.out.print(st[i] + ". ");
 		  		}
 		  		else
-		  			System.out.println("word not found");
+		  			System.out.println("\nnot found: " + st[i]);
 		  	}
+		  	System.out.print("\n");
 	  }
 
-		  public static void readFileToList(List<String> list) {
+		  public static void deleteFileToList(List<String> list) {
 			  	String[] st = {"Lisbon", "NASA", "Kyunghee", "Konkuk",
 			  			"Sogang", "momentarily", "rubella", "vaccinations",
 			  			"government", "Authorities"};
+			  	System.out.print("Deleting...");
 			  	for (int i=0; i<10; i++) {
-			  		if(list.contains(st[i])) {
-			  			System.out.println("word found: " + st[i]);
+			  		if(list.remove(st[i])==true) {
+			  			System.out.print(st[i] + ", ");
 			  		}
 			  		else
-			  			System.out.println("word not found");
+			  			System.out.println("\nnot found: " + st[i]);
 			  	}
+			  	System.out.print("\n");
 		  }
 	}
-
