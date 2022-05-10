@@ -8,14 +8,10 @@ import java.util.*;
 
 public class App {
   public static void main(String[] args) {
-    List<String> words = Reader.readFile("./src/resources/leipzig100k.txt");
+    HashSet<String> words = new HashSet<String>();
+    Reader.readFile(words, "./src/resources/leipzig100k.txt");
 
-    if (words == null) {
-      System.out.println("Não foi possível ler o arquivo");
-    }
-
-    long elapsedTime = Stopwatch.calcElapsedTime(() -> words.contains("Mickey"));
-
+    long elapsedTime = Stopwatch.calcElapsedTime(() -> words.contains("Travis"));
     System.out.println("Tempo Gasto: " + elapsedTime + " ns");
 
   }
