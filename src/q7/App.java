@@ -17,18 +17,16 @@ public class App {
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
 		System.out.print("\n");
-		System.out.print("\n");
 	}
 
 	public static void deleteOnSet(Set<String> set) {
 		System.out.println("Excluindo...");
 		for (int i = 0; i < 10; i++) {
 			if (set.remove(words[i]) == true) {
-				System.out.print(words[i] + ". ");
+				System.out.print(words[i] + " ");
 			} else
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
-		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -36,11 +34,10 @@ public class App {
 		System.out.print("Excluindo...");
 		for (int i = 0; i < 10; i++) {
 			if (list.remove(words[i]) == true) {
-				System.out.print(words[i] + ", ");
+				System.out.print(words[i] + " ");
 			} else
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
-		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -72,24 +69,40 @@ public class App {
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(vector));
 		System.out.println("Vector: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(linkedList));
 		System.out.println("LinkedList: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(arrayList));
 		System.out.println("ArrayList: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(hashMap));
 		System.out.println("HashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(linkedHashMap));
 		System.out.println("LinkedHashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(treeMap));
 		System.out.println("TreeMap: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(hashSet));
 		System.out.println("HashSet: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(linkedHashSet));
 		System.out.println("LinkedHashSet: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(treeSet));
 		System.out.println("TreeSet: " + elapsedTime + " ms");
-
+		System.out.print("\n");
 	}
 }

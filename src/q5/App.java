@@ -13,11 +13,10 @@ public class App {
 		System.out.println("Pesquisando...");
 		for (int i = 0; i < 10; i++) {
 			if (map.containsKey(words[i])) {
-				System.out.print(words[i] + ", ");
+				System.out.print(words[i] + " ");
 			} else
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
-		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -25,11 +24,10 @@ public class App {
 		System.out.println("Pesquisando...");
 		for (int i = 0; i < 10; i++) {
 			if (set.contains(words[i])) {
-				System.out.print(words[i] + ", ");
+				System.out.print(words[i] + " ");
 			} else
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
-		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -37,11 +35,10 @@ public class App {
 		System.out.println("Pesquisando...");
 		for (int i = 0; i < 10; i++) {
 			if (list.contains(words[i])) {
-				System.out.print(words[i] + ", ");
+				System.out.print(words[i] + " ");
 			} else
 				System.out.println("\nNão encontrada: " + words[i]);
 		}
-		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -73,24 +70,40 @@ public class App {
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnList(vector));
 		System.out.println("Vector: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnList(linkedList));
 		System.out.println("LinkedList: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnList(arrayList));
 		System.out.println("ArrayList: " + elapsedTime + " ms");
+		System.out.print("\n");
 
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnMap(hashMap));
 		System.out.println("HashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnMap(linkedHashMap));
 		System.out.println("LinkedHashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnMap(treeMap));
 		System.out.println("TreeMap: " + elapsedTime + " ms");
+		System.out.print("\n");
 
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnSet(hashSet));
 		System.out.println("HashSet: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnSet(linkedHashSet));
 		System.out.println("LinkedHashSet: " + elapsedTime + " ms");
+		System.out.print("\n");
+		
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnSet(treeSet));
 		System.out.println("TreeSet: " + elapsedTime + " ms");
-
+		System.out.print("\n");
 	}
 }
