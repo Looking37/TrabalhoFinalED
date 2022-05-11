@@ -3,18 +3,6 @@ package q5;
 import java.util.*;
 import shared.*;
 
-/*
-Lisbon
-NASA
-Kyunghee
-Konkuk
-Sogang
-momentarily
-rubella
-vaccinations
-government
-Authorities
- */
 public class App {
 
 	static String[] words = { "Lisbon", "NASA", "Kyunghee", "Konkuk",
@@ -81,7 +69,7 @@ public class App {
 		Reader.readFileToSet(linkedHashSet, file);
 		Reader.readFileToSet(treeSet, file);
 
-		System.out.println("====  QuestÃ£o 5  ====");
+		System.out.println("====  Questão 5  ====");
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> searchOnList(vector));
 		System.out.println("Vector: " + elapsedTime + " ms");

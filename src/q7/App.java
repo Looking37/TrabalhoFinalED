@@ -3,18 +3,6 @@ package q7;
 import java.util.*;
 import shared.*;
 
-/*
-Lisbon
-NASA
-Kyunghee
-Konkuk
-Sogang
-momentarily
-rubella
-vaccinations
-government
-Authorities
- */
 public class App {
 	static String[] words = { "Lisbon", "NASA", "Kyunghee", "Konkuk",
 			"Sogang", "momentarily", "rubella", "vaccinations",
