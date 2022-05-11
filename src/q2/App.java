@@ -17,16 +17,19 @@ public class App {
         .calcElapsedTimeInMs(() -> Reader.readFileToSet(hashSet, file));
 
     System.out.println("HashSet: " + elapsedTime + " ms");
+	System.out.print("\n");
 
     elapsedTime = Stopwatch
         .calcElapsedTimeInMs(() -> Reader.readFileToSet(linkedHashSet, file));
 
     System.out.println("LinkedHashSet: " + elapsedTime + " ms");
+	System.out.print("\n");
 
     elapsedTime = Stopwatch
         .calcElapsedTimeInMs(() -> Reader.readFileToSet(treeSet, file));
 
     System.out.println("TreeSet: " + elapsedTime + " ms");
+	System.out.print("\n");
 
   }
 }

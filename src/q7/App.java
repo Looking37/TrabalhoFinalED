@@ -18,7 +18,7 @@ Authorities
 public class App {
 	static String[] words = { "Lisbon", "NASA", "Kyunghee", "Konkuk",
 			"Sogang", "momentarily", "rubella", "vaccinations",
-			"government", "Authorities" };
+			"government", "Authorities"};
 
 	public static void deleteOnMap(Map<String, Integer> map) {
 		System.out.println("Excluindo...");
@@ -26,8 +26,9 @@ public class App {
 			if (map.remove(words[i]) != null) {
 				System.out.print(words[i] + ", ");
 			} else
-				System.out.println("\nNÃ£o encontrada: " + words[i]);
+				System.out.println("\nNão encontrada: " + words[i]);
 		}
+		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -37,8 +38,9 @@ public class App {
 			if (set.remove(words[i]) == true) {
 				System.out.print(words[i] + ". ");
 			} else
-				System.out.println("\nNÃ£o encontrada: " + words[i]);
+				System.out.println("\nNão encontrada: " + words[i]);
 		}
+		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -48,8 +50,9 @@ public class App {
 			if (list.remove(words[i]) == true) {
 				System.out.print(words[i] + ", ");
 			} else
-				System.out.println("\nNÃ£o encontrada: " + words[i]);
+				System.out.println("\nNão encontrada: " + words[i]);
 		}
+		System.out.print("\n");
 		System.out.print("\n");
 	}
 
@@ -77,28 +80,28 @@ public class App {
 		Reader.readFileToSet(linkedHashSet, file);
 		Reader.readFileToSet(treeSet, file);
 
-		System.out.println("====  QuestÃ£o 5  ====");
+		System.out.println("====  Questão 7  ====");
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(vector));
-		System.out.println("Vector: " + elapsedTime + " ns");
+		System.out.println("Vector: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(linkedList));
-		System.out.println("LinkedList: " + elapsedTime + " ns");
+		System.out.println("LinkedList: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnList(arrayList));
-		System.out.println("ArrayList: " + elapsedTime + " ns");
+		System.out.println("ArrayList: " + elapsedTime + " ms");
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(hashMap));
-		System.out.println("HashMap: " + elapsedTime + " ns");
+		System.out.println("HashMap: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(linkedHashMap));
-		System.out.println("LinkedHashMap: " + elapsedTime + " ns");
+		System.out.println("LinkedHashMap: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnMap(treeMap));
-		System.out.println("TreeMap: " + elapsedTime + " ns");
+		System.out.println("TreeMap: " + elapsedTime + " ms");
 
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(hashSet));
-		System.out.println("HashSet: " + elapsedTime + " ns");
+		System.out.println("HashSet: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(linkedHashSet));
-		System.out.println("LinkedHashSet: " + elapsedTime + " ns");
+		System.out.println("LinkedHashSet: " + elapsedTime + " ms");
 		elapsedTime = Stopwatch.calcElapsedTimeInNs(() -> deleteOnSet(treeSet));
-		System.out.println("TreeSet: " + elapsedTime + " ns");
+		System.out.println("TreeSet: " + elapsedTime + " ms");
 
 	}
 }

@@ -13,12 +13,15 @@ public class App {
 		long elapsedTime;
 		elapsedTime = Stopwatch.calcElapsedTimeInMs(() -> Reader.readFileToMap(hashmap, "./src/resources/leipzig100k.txt"));
 		System.out.println("HashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
 
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToMap(linkedhashmap, "./src/resources/leipzig100k.txt"));
 		System.out.println("LinkedHashMap: " + elapsedTime + " ms");
+		System.out.print("\n");
 
 		elapsedTime = Stopwatch.calcElapsedTimeInMs(() -> Reader.readFileToMap(treemap, "./src/resources/leipzig100k.txt"));
 		System.out.println("TreeMap: " + elapsedTime + " ms");
+		System.out.print("\n");
 	}
 }

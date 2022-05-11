@@ -19,16 +19,19 @@ public class App {
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(vector,
 						"./src/resources/leipzig100k.txt"));
 		System.out.println("Vector: " + elapsedTime + " ms");
+		System.out.print("\n");
 
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(linkedList,
 						"./src/resources/leipzig100k.txt"));
 		System.out.println("LinkedList: " + elapsedTime + " ms");
+		System.out.print("\n");
 
 		elapsedTime = Stopwatch
 				.calcElapsedTimeInMs(() -> Reader.readFileToList(arrayList,
 						"./src/resources/leipzig100k.txt"));
 		System.out.println("ArrayList: " + elapsedTime + " ms");
+		System.out.print("\n");
 
 	}
 }
